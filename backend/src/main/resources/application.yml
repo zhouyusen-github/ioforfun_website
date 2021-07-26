@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://your_host_ip:3306/ioforfun?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: your_username
+    password: your_password
+  redis:
+    host: your_host_ip
+    port: 6379
+  mail:
+    host: your_host
+    username: your_username
+    password: your_password
+    properties:
+      mail:
+        smtp:
+          port: 465
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: false
+            port: 465
+server:
+  port: 8080
+activationDomain: # your host ip
+  ip: your_host_ip
+  port: 80
