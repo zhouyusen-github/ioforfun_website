@@ -131,3 +131,6 @@ java -jar backend-1.0-SNAPSHOT.jar
 
 11.  open "http://your_host_ip" in browser
 
+## sample
+http://34.211.155.251/
+
