@@ -58,7 +58,8 @@ export default {
       pageSize: 5,
       currentPage: 1,
       searchWord: this.propsSearchWord,
-      username: this.propsUsername
+      username: this.propsUsername,
+      isFavorite: this.propsIsFavorite
     }
   },
   computed: {
@@ -96,7 +97,11 @@ export default {
     },
   },
   mounted () {
-    this.search()
+    if (this.isFavorite==true) {
+      this.getFavoriteList()
+    } else {
+      this.search()
+    }
   },
   methods: {
     search() {
